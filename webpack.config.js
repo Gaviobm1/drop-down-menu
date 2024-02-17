@@ -18,6 +18,10 @@ module.exports = {
         test: /\.(woff|woff2|otf|ttf|eot)$/i,
         type: "asset/resource",
       },
+      {
+        test: /\.(gif|jpeg|jpg|svg|png|bmp|ico|tiff|webp|avif|apng)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [

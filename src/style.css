@@ -1,0 +1,120 @@
+:root {
+  --button-padding: 0.75rem 1.5rem;
+  --menu-padding: 0.3rem 1.5rem;
+  --general-border-radius: 5px 30px 5px;
+  --grad-color1: #5e4c44;
+  --grad-color2: #cab092;
+  --grad-color3: #d6cbbe;
+  --general-font-size: 1rem;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.menu-button {
+  padding: var(--button-padding);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), linear-gradient(.65turn, var(--grad-color1), var(--grad-color2), var(--grad-color3));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-radius: var(--general-border-radius);
+  border: double 2px transparent;
+  transition: border 0.1s;
+  font-size: var(--general-font-size);
+  color: var(--font-color);
+}
+
+.menu-button:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8)), linear-gradient(.65turn, var(--grad-color3), var(--grad-color2), var(--grad-color1));
+  border: double 3px transparent;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.menu-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: black;
+  opacity: 0.5;
+  padding: 1.5rem;
+  scale: 0;
+  position: absolute;
+  top: 3.5rem;
+  border-radius: var(--general-border-radius);
+}
+
+.menu-wrapper div:nth-child(1) {
+  animation-delay: 100ms;
+}
+
+.menu-wrapper div:nth-child(2) {
+  animation-delay: 200ms;
+}
+
+.menu-wrapper div:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+.menu-wrapper div:nth-child(4) {
+  animation-delay: 400ms;
+}
+
+.menu-wrapper div:nth-child(5) {
+  animation-delay: 500ms;
+}
+
+.menu-item {
+  background-color: white;
+  opacity: 0.5;
+  cursor: pointer;
+  padding: var(--menu-padding);
+  scale: 0;
+  border-radius: var(--general-border-radius);
+}
+
+.menu-item>p {
+  color: black;
+}
+
+.menu-item:hover {
+  opacity: 0.3;
+  transition: 0.2s ease-in-out;
+}
+
+.hidden {
+  animation: fadeOut 500ms ease-out;
+  animation-fill-mode: forwards;
+  scale: 1;
+}
+
+.visible{
+  animation: popIn 500ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
+@keyframes popIn {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 0;
+  }
+}

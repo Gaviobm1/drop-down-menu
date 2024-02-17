@@ -1,4 +1,4 @@
-import { fourItemMenuClass } from './menuClass';
+import { menuClass } from './menuClass';
 import makeButton from './buttonClass';
 import wrapperClass from './wrapperClass';
 
@@ -14,7 +14,7 @@ const makeMenuDivs = function makeDivs(...args) {
 
 const menuDivs = makeMenuDivs('Menu1', 'Menu2', 'Menu3', 'Menu4');
 
-const menu = fourItemMenuClass({
+const menu = menuClass({
   one: menuDivs[0],
   two: menuDivs[1],
   three: menuDivs[2],

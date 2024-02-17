@@ -53,7 +53,7 @@ const addItemToMenu = (obj) => ({
   },
 });
 
-const fourItemMenuClass = function makeMenu({
+const menuClass = function makeMenu({
   one,
   two,
   three,
@@ -77,7 +77,7 @@ const fourItemMenuClass = function makeMenu({
 };
 
 export {
-  fourItemMenuClass,
+  menuClass,
   attachMethod,
   setClassMethod,
   removeClassMethod,
